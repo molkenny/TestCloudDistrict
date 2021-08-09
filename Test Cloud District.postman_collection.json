@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "832da7f8-cf18-483b-9bba-4b16f9a45cfd",
+		"name": "Test Cloud District",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "Get Login Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mail\": \"leorodri85@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "List User Paginated",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjgzOTY4MjksInVzZXIiOnsiaWQiOjEsIm5hbWUiOiJHZXJhcmRvIExlYW5kcm8gUm9kcmlndWV6IiwibWFpbCI6Imxlb3JvZHJpODVAZ21haWwuY29tIiwic3RhdHVzIjp0cnVlLCJpZF9ncm91cCI6MCwiY3JlYXRlZEF0IjoiMjAyMS0wOC0wN1QxOToyNjo0OC4wMDBaIiwidXBkYXRlZEF0IjoiMjAyMS0wOC0wN1QxOToyNjo1MC4wMDBaIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjI4MzYwODI5fQ.zhrHzXfp5lMNnRIGkzW0V1os6kl8bCYRIzU4UFCrfJY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/v1/user",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjgzOTY4MjksInVzZXIiOnsiaWQiOjEsIm5hbWUiOiJHZXJhcmRvIExlYW5kcm8gUm9kcmlndWV6IiwibWFpbCI6Imxlb3JvZHJpODVAZ21haWwuY29tIiwic3RhdHVzIjp0cnVlLCJpZF9ncm91cCI6MCwiY3JlYXRlZEF0IjoiMjAyMS0wOC0wN1QxOToyNjo0OC4wMDBaIiwidXBkYXRlZEF0IjoiMjAyMS0wOC0wN1QxOToyNjo1MC4wMDBaIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjI4MzYwODI5fQ.zhrHzXfp5lMNnRIGkzW0V1os6kl8bCYRIzU4UFCrfJY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Test Operator\",\r\n    \"mail\": \"operator@operator.com\",\r\n    \"password\": \"1234\",\r\n    \"id_group\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/user",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjgzOTY4MjksInVzZXIiOnsiaWQiOjEsIm5hbWUiOiJHZXJhcmRvIExlYW5kcm8gUm9kcmlndWV6IiwibWFpbCI6Imxlb3JvZHJpODVAZ21haWwuY29tIiwic3RhdHVzIjp0cnVlLCJpZF9ncm91cCI6MCwiY3JlYXRlZEF0IjoiMjAyMS0wOC0wN1QxOToyNjo0OC4wMDBaIiwidXBkYXRlZEF0IjoiMjAyMS0wOC0wN1QxOToyNjo1MC4wMDBaIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjI4MzYwODI5fQ.zhrHzXfp5lMNnRIGkzW0V1os6kl8bCYRIzU4UFCrfJY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Test Operator\",\r\n    \"mail\": \"operator@operator.com\",\r\n    \"password\": \"123456\",\r\n    \"id_group\": 1,\r\n    \"status\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/user/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjgzOTY4MjksInVzZXIiOnsiaWQiOjEsIm5hbWUiOiJHZXJhcmRvIExlYW5kcm8gUm9kcmlndWV6IiwibWFpbCI6Imxlb3JvZHJpODVAZ21haWwuY29tIiwic3RhdHVzIjp0cnVlLCJpZF9ncm91cCI6MCwiY3JlYXRlZEF0IjoiMjAyMS0wOC0wN1QxOToyNjo0OC4wMDBaIiwidXBkYXRlZEF0IjoiMjAyMS0wOC0wN1QxOToyNjo1MC4wMDBaIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNjI4MzYwODI5fQ.zhrHzXfp5lMNnRIGkzW0V1os6kl8bCYRIzU4UFCrfJY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/v1/user/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Mjg1Mzc4NDUsInVzZXIiOnsiaWQiOjEsIm5hbWUiOiJHZXJhcmRvIFJvZHJpZ3VleiIsIm1haWwiOiJsZW9yb2RyaTg1QGdtYWlsLmNvbSIsInN0YXR1cyI6dHJ1ZSwiaWRfZ3JvdXAiOjAsImNyZWF0ZWRBdCI6IjIwMjEtMDgtMDdUMTk6MjY6NDguMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDgtMDhUMDM6NDQ6MTguNDQ2WiIsImRlbGV0ZWRBdCI6bnVsbH0sImlhdCI6MTYyODUwMTg0NX0.6_3YCRSme51PyWsU6p4reKCZG23HVk8f52MBJ00no5M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/v1/product",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Mjg1Mzc4NDUsInVzZXIiOnsiaWQiOjEsIm5hbWUiOiJHZXJhcmRvIFJvZHJpZ3VleiIsIm1haWwiOiJsZW9yb2RyaTg1QGdtYWlsLmNvbSIsInN0YXR1cyI6dHJ1ZSwiaWRfZ3JvdXAiOjAsImNyZWF0ZWRBdCI6IjIwMjEtMDgtMDdUMTk6MjY6NDguMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDgtMDhUMDM6NDQ6MTguNDQ2WiIsImRlbGV0ZWRBdCI6bnVsbH0sImlhdCI6MTYyODUwMTg0NX0.6_3YCRSme51PyWsU6p4reKCZG23HVk8f52MBJ00no5M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Samsung s10\",\r\n    \"description\": \"Mobil Alta gama\",\r\n    \"base_price\": 800,\r\n    \"iva\": 10.5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/product",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

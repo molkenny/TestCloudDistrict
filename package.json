@@ -1,0 +1,22 @@
+{
+  "name": "cloud-district",
+  "version": "1.0.0",
+  "description": "Test Cloud District",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gerardo Leandro Rodriguez",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jshint": "^2.13.0",
+    "jsonwebtoken": "^8.5.1",
+    "md5": "^2.3.0",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.6.5",
+    "underscore": "^1.13.1"
+  }
+}

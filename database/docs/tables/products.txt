@@ -1,0 +1,16 @@
+CREATE TABLE products(
+	id serial PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description TEXT,
+    base_price FLOAT,
+    final_price FLOAT,
+    iva FLOAT,
+    id_user_creator BIGINT NOT NULL,
+    available BOOLEAN NOT NULL DEFAULT TRUE,
+	"createdAt" timestamptz NOT NULL,
+	"updatedAt" timestamptz NOT NULL,
+	"deletedAt" timestamptz DEFAULT NULL,	
+	CONSTRAINT fk_user_creator
+		FOREIGN KEY(id_user_creator) 
+			REFERENCES users(id)
+)

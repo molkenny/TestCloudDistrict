@@ -1,0 +1,8 @@
+CREATE TABLE user_groups(
+	id serial PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description VARCHAR(255),
+	"createdAt" timestamptz NOT NULL,
+	"updatedAt" timestamptz NOT NULL,
+	"deletedAt" timestamptz DEFAULT NULL
+)

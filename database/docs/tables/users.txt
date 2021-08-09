@@ -1,0 +1,14 @@
+CREATE TABLE users(
+	id serial PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    mail VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    id_group INTEGER NOT NULL DEFAULT 9,
+    status BOOLEAN NOT NULL DEFAULT TRUE,
+	"createdAt" timestamptz NOT NULL,
+	"updatedAt" timestamptz NOT NULL,
+	"deletedAt" timestamptz DEFAULT NULL,
+    CONSTRAINT fk_user_group
+		FOREIGN KEY(id_group) 
+			REFERENCES user_groups(id)	
+)
