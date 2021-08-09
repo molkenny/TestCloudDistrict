@@ -12,6 +12,14 @@ const list = async(limit, offset, filters) => {
     }
 };
 
+const find = async(id) => {
+    try {
+        return await Product.findByPk(id);
+    } catch (error) {
+        throw error;
+    }
+};
+
 const add = async(name, description, base_price, iva, id_user) => {
     try {
         if (!name || name == '') throw new Error("Debe enviar un name");
@@ -83,6 +91,7 @@ const destroy = async(id) => {
 
 module.exports = {
     list,
+    find,
     add,
     edit,
     destroy

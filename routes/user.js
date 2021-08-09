@@ -37,6 +37,27 @@ app.prefix('/api/v1/user', async function(router) {
         }
     });
 
+    //Find User
+    router.get("/:id", [Auth, Admin], async function(req, res) {
+        try {
+
+            let id_user = req.params.id || null;
+            let result = await UserController.find(id_user);
+
+            res.json({
+                success: true,
+                data: result
+            });
+        } catch (error) {
+            res.status(500).send({
+                success: false,
+                err: {
+                    message: error.message || error.data.err.message || "Error al traer lista de usuarios"
+                }
+            });
+        }
+    });
+
     //Add User
     router.post("/", [Auth, ], async function(req, res) {
         try {

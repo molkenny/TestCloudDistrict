@@ -46,6 +46,28 @@ app.prefix('/api/v1/product', async function(router) {
         }
     });
 
+    //Find products
+    router.get("/:id", [Auth], async function(req, res) {
+        try {
+
+            let id_product = req.params.id || null;
+
+            let result = await ProductController.find(id_product);
+
+            res.json({
+                success: true,
+                data: result
+            });
+        } catch (error) {
+            res.status(500).send({
+                success: false,
+                err: {
+                    message: error.message || error.data.err.message || "Error al traer productos"
+                }
+            });
+        }
+    });
+
     //Add Useproduct
     router.post("/", [Auth, Operator], async function(req, res) {
         try {

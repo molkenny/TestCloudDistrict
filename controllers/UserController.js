@@ -12,6 +12,14 @@ const list = async(limit, offset) => {
     }
 };
 
+const find = async(id) => {
+    try {
+        return await User.findByPk(id);
+    } catch (error) {
+        throw error;
+    }
+};
+
 const add = async(name, mail, password, id_group) => {
     try {
         if (!name || name == '') throw new Error("Debe enviar un name");
@@ -81,6 +89,7 @@ const destroy = async(id) => {
 
 module.exports = {
     list,
+    find,
     add,
     edit,
     destroy
